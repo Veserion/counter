@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="src/bootstrap.css">
+    <link rel="stylesheet" href="src/style.css">
+</head>
+<body>
+<div class="wrapper">
+    <form action="" method="post" name="test" onsubmit="valid()">
+        <input type="button" id="addRow" value="Добавить" onclick="PopUpShow()">
+        <select name="id" id="id"></select>
+        <input type="button" id="deleteRow" value="Удалить" onclick="deleteRow()">
+    </form>
+</div>
+<table id="outTable">
+    <tr id="row">
+        <td>id</td>
+        <td>Дата</td>
+        <td>Сумма</td>
+        <td>Комментарий</td>
+    </tr>
+</table>
+
+<form id="addForm" class="">
+    <input type="button" id="closeButton" value="X" onclick="PopUpHide()">
+    <!--    <p onclick="PopUpHide()" id="closeButton">X</p>-->
+    <input type="date" name="date" id="date" placeholder="Введите дату оказания услуги" required>
+    <input name="cost" id="cost" placeholder="Введите стоимость услуги" required>
+    <textarea name="comment" id="comment" cols="30" rows="5" required></textarea>
+    <input type="button" name="add" value="Добавить" onclick="NewRow()">
+    <script src="src/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
+    <script src="src/script.js"></script>
+</form>
+</body>
+</html>
