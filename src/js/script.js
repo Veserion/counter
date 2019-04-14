@@ -34,8 +34,8 @@ function conventArray(data) {
 function refresh() {
     const title = '<tr ><td>id</td><td>Дата</td><td>Сумма</td><td>Комментарий</td><tr>';
     const cookies = getCookies();
-    const data = cookies.map((item,index) =>
-        `<tr id="${index}"><td>${index}</td>><td>${item.date}</td><td>${item.cost}</td><td>${item.comment}</td></tr>`
+    const data = cookies.map(({date, cost, comment},index) =>
+        `<tr id="${index}"><td>${index}</td>><td>${date}</td><td>${cost}</td><td>${comment}</td></tr>`
     );
     $('#outTable').html(`${title}${data}`);
 
