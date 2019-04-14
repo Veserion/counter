@@ -22,7 +22,7 @@ function removeRow(index) {
     const cookies = getCookies();
     cookies.splice(index, 1);
     setCookies(cookies);
-
+    refresh()
 }
 
 function conventArray(data) {
@@ -38,4 +38,6 @@ function refresh() {
         `<tr id="${index}"><td>${index}</td>><td>${item.date}</td><td>${item.cost}</td><td>${item.comment}</td></tr>`
     );
     $('#outTable').html(`${title}${data}`);
+
+    $('#idSelector').html(cookies.map((_,index) => `<option>${index}</option>`))
 }
