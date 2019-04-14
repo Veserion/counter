@@ -5,29 +5,39 @@
     <title>Form</title>
     <link rel="stylesheet" href="src/css/bootstrap.css">
     <link rel="stylesheet" href="src/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+          integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 </head>
 <body>
 <div class="wrapper">
-    <input type="button" id="addRow" value="Добавить" onclick="PopUpShow()">
-    <select id="idSelector"></select>
-    <input type="button" id="deleteRow" value="Удалить" onclick="removeRow($('#idSelector'))">
-</div>
-<table id="outTable">
-    <tr id="row">
-        <td>id</td>
-        <td>Дата</td>
-        <td>Сумма</td>
-        <td>Комментарий</td>
-    </tr>
-</table>
+    <input type="button" class="btn btn-dark" id="addRow" value="Добавить" onclick="PopUpShow()">
+    <select id="idSelector" class="btn btn-dark"></select>
+    <input type="button" class="btn btn-dark" id="deleteRow" value="Удалить"
+           onclick="removeRow($('#idSelector'))">
 
-<form id="addForm" class="">
-    <input type="button" id="closeButton" value="X" onclick="PopUpHide()">
-    <input type="date" name="date" id="date" placeholder="Введите дату оказания услуги" required>
-    <input name="cost" id="cost" placeholder="Введите стоимость услуги" required>
-    <textarea name="comment" id="comment" cols="30" rows="5" required></textarea>
-    <input type="button" name="add" value="Добавить" onclick="insertRow()">
-</form>
+    <table id="outTable" class="table table-dark">
+        <thead>
+        <tr id="row">
+            <th>id</th>
+            <td>Дата</td>
+            <td>Сумма</td>
+            <td>Комментарий</td>
+        </tr>
+        </thead>
+    </table>
+</div>
+
+<div id="containerForForm">
+    <form id="addForm">
+        <div class="form-group">
+            <button class="btn" onclick="PopUpHide()"><i class="fas fa-window-close"></i></button>
+            <input type="date" name="date" id="date" placeholder="Введите дату оказания услуги" required>
+            <input name="cost" id="cost" placeholder="Введите стоимость услуги" required>
+            <textarea name="comment" id="comment" cols="30" rows="5" required></textarea>
+            <input type="button" name="add" value="Добавить" onclick="insertRow()">
+        </div>
+    </form>
+</div>
 
 <script src="src/js/jquery-3.3.1.min.js"></script>
 <script type="text/javascript"

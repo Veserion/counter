@@ -1,8 +1,8 @@
 const getCookies = () => JSON.parse($.cookie('list_values') || JSON.stringify([])) ;
 const setCookies = (cookie) =>  $.cookie('list_values', JSON.stringify(cookie));
 
-const PopUpShow = () => $("#addForm").show();
-const PopUpHide = () => $("#addForm").hide();
+const PopUpShow = () => $("#containerForForm").show();
+const PopUpHide = () => $("#containerForForm").hide();
 
 $(document).ready(function () {
     PopUpHide();
@@ -35,7 +35,7 @@ function refresh() {
     const title = '<tr ><td>id</td><td>Дата</td><td>Сумма</td><td>Комментарий</td><tr>';
     const cookies = getCookies();
     const data = cookies.map(({date, cost, comment},index) =>
-        `<tr id="${index}"><td>${index}</td>><td>${date}</td><td>${cost}</td><td>${comment}</td></tr>`
+        `<tr id="${index}"><th>${index}</th>><td>${date}</td><td>${cost}</td><td>${comment}</td></tr>`
     );
     $('#outTable').html(`${title}${data}`);
 

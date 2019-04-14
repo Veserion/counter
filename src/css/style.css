@@ -2,6 +2,46 @@
     margin: 0;
     padding: 0;
 }
+
+body{
+    justify-content: center;
+    /*display: flex;*/
+    /*flex-direction: column;*/
+    background-image: url("https://pp.userapi.com/c540100/v540100173/52854/_4JrmTm0e7c.jpg");
+    background-size: cover;
+}
+
+.wrapper{
+    margin: 15% 30%;
+    /*width: 40%;*/
+    /*height: 40%;*/
+    /*position: center;*/
+    text-align: center;
+}
+#addRow{
+    width: 30%;
+    float: left;
+}
+#deleteRow{
+    width: 30%;
+    float: right;
+}
+
+#idSelector{
+    width: 30%;
+    position: center;
+}
+
+#outTable{
+    margin-top: 5%;
+}
+#containerForForm{
+    background: black;
+    width: 100%;
+    height: 100%;
+    opacity: .9;
+    justify-content: center;
+}
 #addForm{
     width: 30%;
     height: 50%;
@@ -9,58 +49,60 @@
     display: flex;
     flex-direction: column;
     border: solid 1px black;
+    /*background: #5a6268;*/
     /*position: fixed;*/
+    /*opacity: 0.5;*/
+    justify-content: center;
 }
+/*#date{*/
+/*    margin: 20px 40px 5px 40px;*/
+/*}*/
+/*#cost{*/
+/*    margin: 5px 40px 5px 40px;*/
+/*}*/
+/*#comment{*/
+/*    margin: 5px 40px 20px 40px;*/
+/*    padding-bottom: 10px;*/
+/*}*/
 
-#date{
-    margin: 20px 40px 5px 40px;
-}
-#cost{
-    margin: 5px 40px 5px 40px;
-}
-#comment{
-    margin: 5px 40px 20px 40px;
-    padding-bottom: 10px;
-}
+/*#closeButton{*/
+/*    width: 8%;*/
+/*    font-weight: bold;*/
+/*    color: red;*/
+/*    float: right;*/
+/*}*/
 
-#closeButton{
-    width: 8%;
-    font-weight: bold;
-    color: red;
-    float: right;
-}
+/*form{*/
+/*    width: 40%;*/
+/*    display: flex;*/
+/*}*/
 
-form{
-    width: 40%;
-    display: flex;
-}
+/*#id{*/
+/*    width: 100px;*/
+/*}*/
 
-#id{
-    width: 100px;
-}
+/*#deleteRow{*/
+/*    width: 100px;*/
+/*}*/
 
-#deleteRow{
-    width: 100px;
-}
+/*#addRow{*/
+/*    width: 100px;*/
+/*}*/
 
-#addRow{
-    width: 100px;
-}
+/*.wrapper{*/
+/*    !*display: flex;*!*/
+/*    !*flex-direction: row;*!*/
+/*    text-align: center;*/
+/*}*/
 
-.wrapper{
-    /*display: flex;*/
-    /*flex-direction: row;*/
-    text-align: center;
-}
+/*table{*/
+/*    margin: 30px 0;*/
+/*    min-height: 40%;*/
+/*}*/
+/*table tr td{*/
+/*    text-align: center;*/
+/*    min-width: 30px;*/
+/*    padding: 0 10px;*/
+/*    border: solid 2px gray;*/
 
-table{
-    margin: 30px 0;
-    min-height: 40%;
-}
-table tr td{
-    text-align: center;
-    min-width: 30px;
-    padding: 0 10px;
-    border: solid 2px gray;
-
-}
+/*}*/
